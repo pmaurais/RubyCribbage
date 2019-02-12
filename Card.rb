@@ -4,6 +4,8 @@
 
 # A single card. Attributes: name (Ace, One, ... King), suit, value (1-10), rank (1-13), and an array of the four attributes for convenience
 class Card
+  attr_accessor :name, :suit, :value, :rank
+
   def initialize(name, suit, value)
     @name = name
     @suit = suit
@@ -30,8 +32,8 @@ class Card
     @data_array[index]
   end
 
-  def ==(card)
-    if @name==card.name && @suit==card.suit && @value==card.value
+  def ==(other)
+    if @name == other.name && @suit == other.suit && @value == other.value
       true
     else
       false

@@ -6,9 +6,11 @@ require 'Card'
 
 # A Deck of 52 Cards
 class Deck
+  attr_accessor :deck
+
   def initialize
-    @cards = []
-    @deck = []
+    @cards = [] # an ordered set of cards
+    @deck = [] # the usable deck
     gen_cards
     shuffle
   end

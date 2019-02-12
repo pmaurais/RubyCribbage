@@ -1,9 +1,14 @@
 # +JMJ+
 # Paul A Maurais
 # 2019
+
+
+require 'Card'
+
+# A players hand (wrapper for a card array)
 class Hand
   def initialize
-    @cards=[]
+    @cards = []
   end
 
   def add_card(card)
