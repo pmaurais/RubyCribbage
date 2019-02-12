@@ -29,6 +29,15 @@ class Card
   def [](index)
     @data_array[index]
   end
+
+  def ==(card)
+    if @name==card.name && @suit==card.suit && @value==card.value
+      true
+    else
+      false
+    end
+  end
+
 end
 
 # +JMJ+
