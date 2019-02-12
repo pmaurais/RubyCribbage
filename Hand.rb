@@ -3,7 +3,7 @@
 # 2019
 
 
-require 'Card'
+require_relative 'Card'
 
 # A players hand (wrapper for a card array)
 class Hand
@@ -31,8 +31,12 @@ class Hand
     @cards.each(&block)
   end
 
-  def inspect
-    @cards.inspect
+  def to_s
+    string_list = []
+    @cards.each do |card|
+      string_list.push(card.to_s)
+    end
+    string_list.to_s
   end
 
 end

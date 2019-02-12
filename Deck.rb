@@ -2,7 +2,7 @@
 # Paul A Maurais
 # 2019
 
-require 'Card'
+require_relative 'Card'
 
 # A Deck of 52 Cards
 class Deck
@@ -46,6 +46,10 @@ class Deck
 
   def deal_card
     @deck.pop
+  end
+
+  def empty?
+    @deck.empty?
   end
 
 end

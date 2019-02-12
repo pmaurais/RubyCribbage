@@ -11,7 +11,7 @@ class Card
     @suit = suit
     @value = value
     @rank = assign_rank
-    @data_array = ['name'=>@name, 'suit'=>@suit, 'value'=>@value, 'rank'=>@rank]
+    @data_array = ['name' => @name, 'suit' => @suit, 'value' => @value, 'rank' => @rank]
   end
 
   def assign_rank
@@ -33,11 +33,15 @@ class Card
   end
 
   def ==(other)
-    if @name == other.name && @suit == other.suit && @value == other.value
+    if @name == other.name && @suit == other.suit
       true
     else
       false
     end
+  end
+
+  def to_s
+    [@name, @suit].to_s
   end
 
 end
