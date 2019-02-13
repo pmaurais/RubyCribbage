@@ -33,13 +33,29 @@ def pairs(subsets)
   cnt = 0
   subsets.each do |set|
     next if set.length > 2
-
     cnt += 1 if set[0].name == set[1].name
   end
   cnt * 2
 end
 
-# TODO
+# this is messy but it works because it exhaustively covers every subset
+# TODO clean this code
 def runs(subsets)
+  max_run=0
+  subsets.each do |set|
+    next if set.length <= 2
+    set=set.sort
+    prev_card=set.shift
+    cur_run = 0
+    set.each do |cur_card|
+      if cur_card.rank == prev_card.rank+1
+        cur_run += 1
+      else
+        cur_run=0
+        next
+      end
+    end
+    max_run = cur_run if max_run < cur_run
+  end
 end
 
