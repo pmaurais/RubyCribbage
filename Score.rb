@@ -54,6 +54,7 @@ def runs(subsets)
         cur_run=0
         next
       end
+      prev_card=cur_card
     end
     max_run = cur_run if max_run < cur_run
   end
