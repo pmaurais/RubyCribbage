@@ -52,7 +52,7 @@ def runs(subsets)
         cur_run += 1
       else
         cur_run=0
-        next
+        break
       end
       prev_card=cur_card
     end
